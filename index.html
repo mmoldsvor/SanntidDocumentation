@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Group 41 Elevator project’s documentation! &mdash; Group 41 Elevator project 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Group 41 Elevator project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to Group 41 Elevator project’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#state-manager">State Manager</a></li>
+<li><a class="reference internal" href="#transmission-manager">Transmission Manager</a></li>
+<li><a class="reference internal" href="#connection-manager">Connection Manager</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Group 41 Elevator project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to Group 41 Elevator project’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-group-41-elevator-project-s-documentation">
+<h1>Welcome to Group 41 Elevator project’s documentation!<a class="headerlink" href="#welcome-to-group-41-elevator-project-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="state-manager">
+<h1>State Manager<a class="headerlink" href="#state-manager" title="Permalink to this headline"></a></h1>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420get_network_elevator7uint8_tP9hashmap_t">
+<span id="_CPPv320get_network_elevator7uint8_tP9hashmap_t"></span><span id="_CPPv220get_network_elevator7uint8_tP9hashmap_t"></span><span id="get_network_elevator__uint8_t.hashmap_tP"></span><span class="target" id="state__manager_8c_1a4bf60edd1c2a4831ea50ba4ad106d548"></span><span class="n"><span class="pre">elevator_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_network_elevator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420get_network_elevator7uint8_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets a pointer to all elevator data on the network, stored locally in network_elevators. </p>
+<p>If no id matches with hashmap content, a new entry is allocated with necessary memory to the hashmap. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The new elevator is allocated with id 0, thus is not a valid elevator before proper initialization</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – <strong>[in]</strong> id of elevator </p></li>
+<li><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pointer to the network elevator </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429set_minimal_operational_state7uint8_tP22local_elevator_state_tbbP9hashmap_t">
+<span id="_CPPv329set_minimal_operational_state7uint8_tP22local_elevator_state_tbbP9hashmap_t"></span><span id="_CPPv229set_minimal_operational_state7uint8_tP22local_elevator_state_tbbP9hashmap_t"></span><span id="set_minimal_operational_state__uint8_t.local_elevator_state_tP.b.b.hashmap_tP"></span><span class="target" id="state__manager_8c_1a25f8d82c6dc985d1c7012c503c4e9afe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_minimal_operational_state</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">local_elevator_state_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">local_elevator_state</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">at_floor</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">obstruction</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429set_minimal_operational_state7uint8_tP22local_elevator_state_tbbP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The elevator states in initalize list is needed at all times to be minimally operational. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – <strong>[in]</strong> id of elevator </p></li>
+<li><p><strong>local_elevator_state</strong> – <strong>[in]</strong> states required to perform reassignment of floors </p></li>
+<li><p><strong>at_floor</strong> – <strong>[in]</strong> is elevator at floor </p></li>
+<li><p><strong>obstruction</strong> – <strong>[in]</strong> is elevator obstructed </p></li>
+<li><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427set_fully_operational_state7uint8_tP22local_elevator_state_tbbbP9hashmap_t">
+<span id="_CPPv327set_fully_operational_state7uint8_tP22local_elevator_state_tbbbP9hashmap_t"></span><span id="_CPPv227set_fully_operational_state7uint8_tP22local_elevator_state_tbbbP9hashmap_t"></span><span id="set_fully_operational_state__uint8_t.local_elevator_state_tP.b.b.b.hashmap_tP"></span><span class="target" id="state__manager_8c_1a6ffbd29550783ec525b0a5250f045da2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_fully_operational_state</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="n"><span class="pre">local_elevator_state_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">local_elevator_state</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stop_button</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">power_loss</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">synced</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427set_fully_operational_state7uint8_tP22local_elevator_state_tbbbP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the remaining fields for the elevator to be fully operational. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Should be used in conjunction with set_minimal_operational_state</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – <strong>[in]</strong> id of elevator </p></li>
+<li><p><strong>local_elevator_state</strong> – <strong>[in]</strong> states required to perform reassignment of floors </p></li>
+<li><p><strong>stop_button</strong> – <strong>[in]</strong> is the stop button pressed </p></li>
+<li><p><strong>power_loss</strong> – <strong>[in]</strong> does the elevator have power loss </p></li>
+<li><p><strong>synced</strong> – <strong>[in]</strong> is the elevator synced </p></li>
+<li><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422transfer_poller_statesP10elevator_tP14poller_state_t">
+<span id="_CPPv322transfer_poller_statesP10elevator_tP14poller_state_t"></span><span id="_CPPv222transfer_poller_statesP10elevator_tP14poller_state_t"></span><span id="transfer_poller_states__elevator_tP.poller_state_tP"></span><span class="target" id="state__manager_8c_1a97c53354646aaeca356f1c2bd64f85b1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transfer_poller_states</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">elevator_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">elevator</span></span>, <span class="n"><span class="pre">poller_state_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">poller_state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422transfer_poller_statesP10elevator_tP14poller_state_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Transfers the poller states to elevator_t. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elevator</strong> – <strong>[in]</strong> every property of an elevator </p></li>
+<li><p><strong>poller_state</strong> – <strong>[in]</strong> every new state received by the poller this poll event </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424transfer_poller_requestsP19elevator_requests_tP14poller_state_t">
+<span id="_CPPv324transfer_poller_requestsP19elevator_requests_tP14poller_state_t"></span><span id="_CPPv224transfer_poller_requestsP19elevator_requests_tP14poller_state_t"></span><span id="transfer_poller_requests__elevator_requests_tP.poller_state_tP"></span><span class="target" id="state__manager_8c_1ab10b2be9745d90e2ce011069ce083dab"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transfer_poller_requests</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">elevator_requests_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">requests</span></span>, <span class="n"><span class="pre">poller_state_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">poller_state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424transfer_poller_requestsP19elevator_requests_tP14poller_state_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Transfers the poller requests to elevator_requests. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>requests</strong> – <strong>[in]</strong> only new requests received from the poller </p></li>
+<li><p><strong>poller_state</strong> – <strong>[in]</strong> every new state received by the poller this poll event </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if any new requests, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413any_connected7uint8_tP9hashmap_t">
+<span id="_CPPv313any_connected7uint8_tP9hashmap_t"></span><span id="_CPPv213any_connected7uint8_tP9hashmap_t"></span><span id="any_connected__uint8_t.hashmap_tP"></span><span class="target" id="state__manager_8c_1ac1e6f490a9cb47ee5bb4b3672266d443"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">any_connected</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">own_id</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413any_connected7uint8_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Iterates over all network_elevators and checks for connections to any other elevator. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>own_id</strong> – <strong>[in]</strong> id of elevator </p></li>
+<li><p><strong>network_elevator</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if at least one elevator on the network is connected, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426update_elevator_indicators7int32_tP10elevator_tP20hall_requests_bool_t">
+<span id="_CPPv326update_elevator_indicators7int32_tP10elevator_tP20hall_requests_bool_t"></span><span id="_CPPv226update_elevator_indicators7int32_tP10elevator_tP20hall_requests_bool_t"></span><span id="update_elevator_indicators__int32_t.elevator_tP.hall_requests_bool_tP"></span><span class="target" id="state__manager_8c_1ac7ecfc14332167b1fec3a27206358b18"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_elevator_indicators</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tcp_socket</span></span>, <span class="n"><span class="pre">elevator_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">elevator</span></span>, <span class="n"><span class="pre">hall_requests_bool_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hall_requests</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426update_elevator_indicators7int32_tP10elevator_tP20hall_requests_bool_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Updates elevator indicator lights. </p>
+<p>Updates the indicator to reflect the states contained in the elevator_t and hall_requests_bool_t</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tcp_socket</strong> – <strong>[in]</strong> file desctriptor of the channel to a tcp connection </p></li>
+<li><p><strong>elevator</strong> – <strong>[in]</strong> every property of an elevator </p></li>
+<li><p><strong>hall_requests</strong> – <strong>[in]</strong> the current hall requests </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420assign_hall_requests7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t">
+<span id="_CPPv320assign_hall_requests7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t"></span><span id="_CPPv220assign_hall_requests7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t"></span><span id="assign_hall_requests__int32_t.uint8_t.hall_requests_bool_tP.hashmap_tP"></span><span class="target" id="state__manager_8c_1ae6395d3ba6d859a1820e14f76590d645"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assign_hall_requests</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state_machine_socket</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">own_id</span></span>, <span class="n"><span class="pre">hall_requests_bool_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hall_state</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420assign_hall_requests7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Assigns/Reassigns hall requests. </p>
+<p>Creates an order, and performs a optimal_hall_request algorithm to find which hall requests should be taken. The order is propagated to the elevator state machine with the hall requests it has been assigned. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_machine_socket</strong> – <strong>[in]</strong> file descriptor of the channel where state machine orders and responses are sent </p></li>
+<li><p><strong>own_id</strong> – <strong>[in]</strong> id of elevator </p></li>
+<li><p><strong>hall_state</strong> – <strong>[in]</strong> the current state of the hall calls </p></li>
+<li><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416confirm_elevator7int32_tP10elevator_t">
+<span id="_CPPv316confirm_elevator7int32_tP10elevator_t"></span><span id="_CPPv216confirm_elevator7int32_tP10elevator_t"></span><span id="confirm_elevator__int32_t.elevator_tP"></span><span class="target" id="state__manager_8c_1a177951babf9d897c01d982739a552a3c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">confirm_elevator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tm_data_socket</span></span>, <span class="n"><span class="pre">elevator_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">unconfirmed_state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416confirm_elevator7int32_tP10elevator_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send confirmation of elevator states. </p>
+<p>Creates data packet using create_tm_data_packet. Sends data packet to transmission manager. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tm_data_socket</strong> – <strong>[in]</strong> file descriptor of the channel where transmission manager data is sent and received </p></li>
+<li><p><strong>unconfirmed_state</strong> – <strong>[in]</strong> unconfirmed elevator states which should be confirmed </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416confirm_requests7int32_tP19elevator_requests_t16tm_packet_type_t">
+<span id="_CPPv316confirm_requests7int32_tP19elevator_requests_t16tm_packet_type_t"></span><span id="_CPPv216confirm_requests7int32_tP19elevator_requests_t16tm_packet_type_t"></span><span id="confirm_requests__int32_t.elevator_requests_tP.tm_packet_type_t"></span><span class="target" id="state__manager_8c_1a1195e13bc7151c5d210d0714a2321600"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">confirm_requests</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tm_data_socket</span></span>, <span class="n"><span class="pre">elevator_requests_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">unconfirmed_requests</span></span>, <span class="n"><span class="pre">tm_packet_type_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">packet_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416confirm_requests7int32_tP19elevator_requests_t16tm_packet_type_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sends confirmation of hall states. </p>
+<p>Creates data packet using create_tm_data_packet. Sends data packet to transmission manager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tm_data_socket</strong> – <strong>[in]</strong> file descriptor of the channel where transmission manager data is sent and received </p></li>
+<li><p><strong>unconfirmed_requests</strong> – <strong>[in]</strong> unconfirmed requests which should be confirmed </p></li>
+<li><p><strong>packet_type</strong> – <strong>[in]</strong> type of packet, either REQUEST_SET or REQUEST_CLEAR </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423request_synchronization7int32_t7uint8_t">
+<span id="_CPPv323request_synchronization7int32_t7uint8_t"></span><span id="_CPPv223request_synchronization7int32_t7uint8_t"></span><span id="request_synchronization__int32_t.uint8_t"></span><span class="target" id="state__manager_8c_1a4bab6e4d64ea09897d7103bce443430d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">request_synchronization</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_socket</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423request_synchronization7int32_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Requests synchronization from specified id. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_socket</strong> – <strong>[in]</strong> file descriptor of the channel where transmission manager data is sent and received </p></li>
+<li><p><strong>id</strong> – <strong>[in]</strong> id of elevator </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421start_synchronization7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t">
+<span id="_CPPv321start_synchronization7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t"></span><span id="_CPPv221start_synchronization7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t"></span><span id="start_synchronization__int32_t.uint8_t.hall_requests_bool_tP.hashmap_tP"></span><span class="target" id="state__manager_8c_1a8d479aa277b733a0c9c0998857b0c832"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start_synchronization</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_socket</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">recipient_id</span></span>, <span class="n"><span class="pre">hall_requests_bool_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hall_state</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421start_synchronization7int32_t7uint8_tP20hall_requests_bool_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send all elevator states that has ever been connected to this device, as well as current requests. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_socket</strong> – <strong>[in]</strong> file descriptor of the channel where transmission manager data is sent and received </p></li>
+<li><p><strong>recipient_id</strong> – <strong>[in]</strong> id of the recipient elevator </p></li>
+<li><p><strong>hall_state</strong> – <strong>[in]</strong> the current state of the hall calls </p></li>
+<li><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424complete_synchronization7int32_t7int32_tP10elevator_tP20hall_requests_bool_t">
+<span id="_CPPv324complete_synchronization7int32_t7int32_tP10elevator_tP20hall_requests_bool_t"></span><span id="_CPPv224complete_synchronization7int32_t7int32_tP10elevator_tP20hall_requests_bool_t"></span><span id="complete_synchronization__int32_t.int32_t.elevator_tP.hall_requests_bool_tP"></span><span class="target" id="state__manager_8c_1a3c0fa456f869c3a14a9f2e08515f45c9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">complete_synchronization</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_socket</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sync_timer_fd</span></span>, <span class="n"><span class="pre">elevator_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">elevator</span></span>, <span class="n"><span class="pre">hall_requests_bool_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hall_requests</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424complete_synchronization7int32_t7int32_tP10elevator_tP20hall_requests_bool_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sends the updated elevator state and hall requests after the synchronization process is completed. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_socket</strong> – <strong>[in]</strong> file descriptor of the channel where transmission manager data is sent and received </p></li>
+<li><p><strong>sync_timer_fd</strong> – <strong>[in]</strong> file descriptor to the synchronization timeout timer </p></li>
+<li><p><strong>elevator</strong> – <strong>[in]</strong> every property of an elevator </p></li>
+<li><p><strong>hall_requests</strong> – <strong>[in]</strong> the current hall requests </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428free_network_elevator_statesP9hashmap_t">
+<span id="_CPPv328free_network_elevator_statesP9hashmap_t"></span><span id="_CPPv228free_network_elevator_statesP9hashmap_t"></span><span id="free_network_elevator_states__hashmap_tP"></span><span class="target" id="state__manager_8c_1ab26c23dae0794c140e034c2b66e2a7ef"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">free_network_elevator_states</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">network_elevators</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428free_network_elevator_statesP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Iterates over network hashmap and frees up allocated memory, as well as corresponding hashmap data. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network_elevators</strong> – <strong>[in]</strong> hashmap_t containing all previously known elevator states on the network </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419state_manager_start7uint8_t">
+<span id="_CPPv319state_manager_start7uint8_t"></span><span id="_CPPv219state_manager_start7uint8_t"></span><span id="state_manager_start__uint8_t"></span><span class="target" id="state__manager_8c_1a335a28d47d6c00768331d9bb2b90e552"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state_manager_start</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419state_manager_start7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Main function of the state manager. </p>
+<p>Employes a while loop to run indefinitly, as long as tcp_socket is open. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – <strong>[in]</strong> id of elevator </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="transmission-manager">
+<h1>Transmission Manager<a class="headerlink" href="#transmission-manager" title="Permalink to this headline"></a></h1>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411send_to_all7int32_t7uint8_tP16tm_data_packet_tP9hashmap_t">
+<span id="_CPPv311send_to_all7int32_t7uint8_tP16tm_data_packet_tP9hashmap_t"></span><span id="_CPPv211send_to_all7int32_t7uint8_tP16tm_data_packet_tP9hashmap_t"></span><span id="send_to_all__int32_t.uint8_t.tm_data_packet_tP.hashmap_tP"></span><span class="target" id="transmission__manager_8c_1a0000694c0214980f9b767f8f31703512"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_to_all</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_socket</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sender_id</span></span>, <span class="n"><span class="pre">tm_data_packet_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data_packet</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411send_to_all7int32_t7uint8_tP16tm_data_packet_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send packet to all elevators using connection_manager. </p>
+<p>Sends packet to all elevators based on the id field of the data_packet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_socket</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>sender_id</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>data_packet</strong> – <strong>[in]</strong> tm_data_packet_t to be sent to the other elevators </p></li>
+<li><p><strong>connection_map</strong> – <strong>[in]</strong> hashmap containing all id and response status of all connected devices </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416send_to_specific7int32_t7uint8_tP16tm_data_packet_t">
+<span id="_CPPv316send_to_specific7int32_t7uint8_tP16tm_data_packet_t"></span><span id="_CPPv216send_to_specific7int32_t7uint8_tP16tm_data_packet_t"></span><span id="send_to_specific__int32_t.uint8_t.tm_data_packet_tP"></span><span class="target" id="transmission__manager_8c_1adf90b119d531aa1de4ef6b545e50a071"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_to_specific</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_socket</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sender_id</span></span>, <span class="n"><span class="pre">tm_data_packet_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data_packet</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416send_to_specific7int32_t7uint8_tP16tm_data_packet_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send packet to a specific elevator using the connection_manager. </p>
+<p>Sends packet to a specific elevator based on the id field of the data_packet. The field is id field is then changed to represent the id of the sender.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_socket</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>sender_id</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>data_packet</strong> – <strong>[in]</strong> tm_data_packet to be sent to the other elevators </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422reset_confirmation_mapP9hashmap_t">
+<span id="_CPPv322reset_confirmation_mapP9hashmap_t"></span><span id="_CPPv222reset_confirmation_mapP9hashmap_t"></span><span id="reset_confirmation_map__hashmap_tP"></span><span class="target" id="transmission__manager_8c_1aff71e364e139d09521b01a5743de3a6a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_confirmation_map</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422reset_confirmation_mapP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Resets the hashmap which is used to keep track of confirmation responses. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>connection_map</strong> – <strong>[in]</strong> hashmap containing all id and response status of all connected devices </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430received_confirmation_from_allP9hashmap_t">
+<span id="_CPPv330received_confirmation_from_allP9hashmap_t"></span><span id="_CPPv230received_confirmation_from_allP9hashmap_t"></span><span id="received_confirmation_from_all__hashmap_tP"></span><span class="target" id="transmission__manager_8c_1ae149fa3a0c13d3602b3054ed2baabd61"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">received_confirmation_from_all</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430received_confirmation_from_allP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Checks if confirmation has been received from all connected elevators. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>connection_map</strong> – <strong>[in]</strong> hashmap containing all id and response status of all connected devices </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>false if one or more connections have not responded, true otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420remove_queued_packetP13linked_list_t7int32_t">
+<span id="_CPPv320remove_queued_packetP13linked_list_t7int32_t"></span><span id="_CPPv220remove_queued_packetP13linked_list_t7int32_t"></span><span id="remove_queued_packet__linked_list_tP.int32_t"></span><span class="target" id="transmission__manager_8c_1ae9c6c3f717b4be42e734860e67b8730f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove_queued_packet</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">linked_list_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">queued_packets</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">queue_event_fd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420remove_queued_packetP13linked_list_t7int32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Removes the first element in the queued_packets list. </p>
+<p>Removes the first element in the queued_packets list, and reduces the semaphore which queue_event_fd file descriptor represents. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queued_packets[out]</strong> – </p></li>
+<li><p><strong>queued_event_fd</strong> – <strong>[in]</strong> </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49confirmedP21transmission_handle_t">
+<span id="_CPPv39confirmedP21transmission_handle_t"></span><span id="_CPPv29confirmedP21transmission_handle_t"></span><span id="confirmed__transmission_handle_tP"></span><span class="target" id="transmission__manager_8c_1a066ac545a9de4bd0ee3714fe46ec6559"></span><span class="n"><span class="pre">transmission_state_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">confirmed</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">transmission_handle_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">transmission_handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49confirmedP21transmission_handle_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Confirmed state procedure. </p>
+<p>If packet is sent by this elevator, send the packet to all connected devices. If NEW state received from another device, respond with UNCONFIRMED.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transmission_handle</strong> – <strong>[in]</strong> </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>new state after the current state has been performed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44new_P21transmission_handle_t">
+<span id="_CPPv34new_P21transmission_handle_t"></span><span id="_CPPv24new_P21transmission_handle_t"></span><span id="new___transmission_handle_tP"></span><span class="target" id="transmission__manager_8c_1aa3e6375f63cd45afa93dac5bc81ea87d"></span><span class="n"><span class="pre">transmission_state_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">transmission_handle_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">transmission_handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44new_P21transmission_handle_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>New state procedure. </p>
+<p>If received packet has NEW state, a collision has occured. Send a collision notification to all connected devices or wait depending on id. If received packet has UNCONFIRMED state, wait for all connected devices to respond, then respond with CONFIRMED.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transmission_handle</strong> – <strong>[in]</strong> </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>new state after the current state has been performed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411unconfirmedP21transmission_handle_t">
+<span id="_CPPv311unconfirmedP21transmission_handle_t"></span><span id="_CPPv211unconfirmedP21transmission_handle_t"></span><span id="unconfirmed__transmission_handle_tP"></span><span class="target" id="transmission__manager_8c_1a8b13cdefb963ea4f37ae0c3ad8850a3e"></span><span class="n"><span class="pre">transmission_state_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unconfirmed</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">transmission_handle_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">transmission_handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411unconfirmedP21transmission_handle_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>New state procedure. </p>
+<p>If received packet has CONFIRMED state, send confirmed packet to state manager, otherwise disregard</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transmission_handle</strong> – <strong>[in]</strong> </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CONFIRMED if confirmation is recieved, UNCONFIRMED otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="connection-manager">
+<h1>Connection Manager<a class="headerlink" href="#connection-manager" title="Permalink to this headline"></a></h1>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420establish_connectionP17peer_connection_tP9hashmap_t">
+<span id="_CPPv320establish_connectionP17peer_connection_tP9hashmap_t"></span><span id="_CPPv220establish_connectionP17peer_connection_tP9hashmap_t"></span><span id="establish_connection__peer_connection_tP.hashmap_tP"></span><span class="target" id="connection__manager_8c_1aab5572a245c9142207498f4ba28cdc49"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">establish_connection</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">peer_connection_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">peer_connection</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420establish_connectionP17peer_connection_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Establishes tcp connection to peer connection. </p>
+<p>Allocates memory to connection hashmap, and inserts “discovered” peer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer_connection</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>connection_map</strong> – <strong>[in]</strong> local hashmap holding connections to elevators on network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418listen_connectionsP6fd_setP16cm_thread_data_tP9hashmap_t">
+<span id="_CPPv318listen_connectionsP6fd_setP16cm_thread_data_tP9hashmap_t"></span><span id="_CPPv218listen_connectionsP6fd_setP16cm_thread_data_tP9hashmap_t"></span><span id="listen_connections__fd_setP.cm_thread_data_tP.hashmap_tP"></span><span class="target" id="connection__manager_8c_1a95e796af3b48a093643c9c208e554fc5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen_connections</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">fd_set</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rfds</span></span>, <span class="n"><span class="pre">cm_thread_data_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">thread_data</span></span>, <span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418listen_connectionsP6fd_setP16cm_thread_data_tP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets file despcriptor monitoring for all active tcp connections. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rfds</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>thread_data</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>connection_map</strong> – <strong>[in]</strong> local hashmap holding connections to elevators on network </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417close_connectionsP9hashmap_t">
+<span id="_CPPv317close_connectionsP9hashmap_t"></span><span id="_CPPv217close_connectionsP9hashmap_t"></span><span id="close_connections__hashmap_tP"></span><span class="target" id="connection__manager_8c_1a1e6bb7e6ce6ce2f21e9102f4366484b2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close_connections</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">hashmap_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">connection_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417close_connectionsP9hashmap_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Closes TCP connection. </p>
+<p>Iterates through the connection hashmap, removes hashmap entry and frees up memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>connectin_map</strong> – <strong>[in]</strong> local hashmap holding connections to elevators on network </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414calculate_port7uint8_t7uint8_t">
+<span id="_CPPv314calculate_port7uint8_t7uint8_t"></span><span id="_CPPv214calculate_port7uint8_t7uint8_t"></span><span id="calculate_port__uint8_t.uint8_t"></span><span class="target" id="connection__manager_8c_1a00ad5e25d4c37540e9a2d8daabe57ae9"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calculate_port</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">server_id</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">client_id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414calculate_port7uint8_t7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates port number. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>server_id</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>client_id</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>port_number </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonas, Sindre, Martin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

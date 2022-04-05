@@ -1,0 +1,115 @@
+.. Group 41 Elevator project documentation master file, created by
+   sphinx-quickstart on Thu Mar 31 11:08:35 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Group 41 Elevator project's documentation!
+=====================================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+State Manager
+=============
+
+.. doxygenfunction:: get_network_elevator
+   :project: project-group-41
+
+.. doxygenfunction:: set_minimal_operational_state
+   :project: project-group-41
+   
+.. doxygenfunction:: set_fully_operational_state
+   :project: project-group-41
+   
+.. doxygenfunction:: transfer_poller_states
+   :project: project-group-41
+   
+.. doxygenfunction:: transfer_poller_requests
+   :project: project-group-41
+   
+.. doxygenfunction:: any_connected
+   :project: project-group-41
+   
+.. doxygenfunction:: update_elevator_indicators
+   :project: project-group-41
+   
+.. doxygenfunction:: assign_hall_requests
+   :project: project-group-41
+   
+.. doxygenfunction:: confirm_elevator
+   :project: project-group-41
+   
+.. doxygenfunction:: confirm_requests
+   :project: project-group-41
+   
+.. doxygenfunction:: request_synchronization
+   :project: project-group-41
+   
+.. doxygenfunction:: start_synchronization
+   :project: project-group-41
+   
+.. doxygenfunction:: complete_synchronization
+   :project: project-group-41
+   
+.. doxygenfunction:: free_network_elevator_states
+   :project: project-group-41
+   
+.. doxygenfunction:: state_manager_start
+   :project: project-group-41
+   
+Transmission Manager
+====================
+   
+.. doxygenfunction:: send_to_all
+   :project: project-group-41
+   
+.. doxygenfunction:: send_to_specific
+   :project: project-group-41
+   
+.. doxygenfunction:: reset_confirmation_map
+   :project: project-group-41
+   
+.. doxygenfunction:: received_confirmation_from_all
+   :project: project-group-41
+   
+.. doxygenfunction:: remove_queued_packet
+   :project: project-group-41
+   
+.. doxygenfunction:: confirmed
+   :project: project-group-41
+   
+.. doxygenfunction:: new_
+   :project: project-group-41
+   
+.. doxygenfunction:: unconfirmed
+   :project: project-group-41
+
+
+Connection Manager
+==================
+   
+.. doxygenfunction:: establish_connection
+   :project: project-group-41
+   
+.. doxygenfunction:: listen_connections
+   :project: project-group-41
+   
+.. doxygenfunction:: close_connections
+   :project: project-group-41
+   
+.. doxygenfunction:: calculate_port
+   :project: project-group-41
+
+
+   
+
